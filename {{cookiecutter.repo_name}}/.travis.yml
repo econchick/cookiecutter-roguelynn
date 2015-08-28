@@ -1,0 +1,26 @@
+language: python
+python: 2.7
+env:
+- TOX_ENV=py27
+- TOX_ENV=py33
+- TOX_ENV=py34
+- TOX_ENV=pypy
+- TOX_ENV=docs
+- TOX_ENV=flake8
+- TOX_ENV=manifest
+install:
+- pip install tox coveralls
+script:
+- tox --hashseed 0 -e $TOX_ENV
+notifications:
+  email: false
+  # slack:
+    # secure: foobar
+deploy:
+  provider: pypi
+  user: {{ cookiecutter.pypi_username }}
+  password:
+    # secure: foobar
+  on:
+    tags: true
+  distributions: sdist bdist_wheel

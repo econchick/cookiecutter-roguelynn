@@ -1,0 +1,6 @@
+include *.rst *.txt docs/Makefile LICENSE .coveragerc .travis.yml *.ini
+recursive-include {{ cookiecutter.project_name }} *.py
+recursive-include docs *.py *.rst
+recursive-include docs/_static *
+prune docs/_build
+recursive-include tests *.py

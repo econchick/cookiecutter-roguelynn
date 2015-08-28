@@ -1,0 +1,12 @@
+{
+    "full_name": "Lynn Root",
+    "email": "lynn@lynnroot.com",
+    "github_username": "econchick",
+    "pypi_username": "roguelynn",
+    "project_name": "Python App",
+    "repo_name": "pythonapp",
+    "short_desc": "Short description of app",
+    "release_date": "2015-01-01",
+    "year": "2015",
+    "version": "0.0.1.dev1"
+}
